@@ -27,6 +27,7 @@ if you intend to release a multi-game plugin.
 
 As csgo_soundmixer is a required plugin for the usage in other plugins you may package it with your plugin (MIT license afterall).
 
+Also take a look at the [testing plugin](https://github.com/2called-chaos/csgo_soundmixer/blob/master/addons/sourcemod/scripting/csgo_smix_test.sp).
 
 ### Forwards
 
@@ -49,7 +50,7 @@ As csgo_soundmixer is a required plugin for the usage in other plugins you may p
 * `void SMix_ClearAllSounds()`<br>
   Removes all registered sounds, no idea why one would do that but yeah
 
-* `SMixSound SMix_CreateSound(char[] name, char[] sample, float volume = 1.0, bool precache = true, int forceFormat = 0)`
+* `SMixSound SMix_CreateSound(char[] name, char[] sample, float volume = 1.0, bool precache = true, int forceFormat = 0)`<br>
   Registers a new sound with a name, sample should be `folder/file.mp3` or `folder/file.wav`, plugin will create the other
   version automatically. Don't include `sound/` prefix. Returns an `SMixSound` methodmap.
 
