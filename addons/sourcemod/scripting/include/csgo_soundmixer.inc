@@ -4,7 +4,7 @@
 #define _soundmixer_natives_included_
 
 #define SMIX_MAXSOUNDS 100
-#define SMIX_VERSION "1.0.0"
+#define SMIX_VERSION "1.0.1"
 
 forward void      SMix_OnPlayerChange(int client, int oldValue, int newValue);
 native  int       SMix_ClientState(int client);
@@ -163,6 +163,23 @@ public SharedPlugin __pl_csgo_soundmixer =
 #if !defined REQUIRE_PLUGIN
 public void __pl_csgo_soundmixer_SetNTVOptional()
 {
-   //MarkNativeAsOptional("");
+  MarkNativeAsOptional("SMix_ClearAllSounds");
+  MarkNativeAsOptional("SMix_ForceFormatAll");
+  MarkNativeAsOptional("SMix_CreateSound");
+  MarkNativeAsOptional("SMix_FindSound");
+  MarkNativeAsOptional("SMix_ClientState");
+  MarkNativeAsOptional("SMix_ForceClientCheck");
+  MarkNativeAsOptional("SMix_EmitSoundToAll");
+  MarkNativeAsOptional("SMix_EmitSoundToClient");
+  MarkNativeAsOptional("SMix_Sound_WavSample");
+  MarkNativeAsOptional("SMix_Sound_Mp3Sample");
+  MarkNativeAsOptional("SMix_Sound_Volume");
+  MarkNativeAsOptional("SMix_Sound_SetVolume");
+  MarkNativeAsOptional("SMix_Sound_Precache");
+  MarkNativeAsOptional("SMix_Sound_SetPrecache");
+  MarkNativeAsOptional("SMix_Sound_ForceFormat");
+  MarkNativeAsOptional("SMix_Sound_SetForceFormat");
+  MarkNativeAsOptional("SMix_Sound_EmitToAll");
+  MarkNativeAsOptional("SMix_Sound_EmitToClient");
 }
 #endif
